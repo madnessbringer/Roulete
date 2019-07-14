@@ -44,7 +44,7 @@ print("""Выберите вариант...
 """)
 
 #Ввод варианта для программы
-option = input()
+option = int(input())
 
 
 #Функция получения рандомного элемента массива
@@ -54,13 +54,13 @@ def randish(array):
 
 #"Эмуляция" switch-case с помощью словаря, аналога Map в java
 value = {
-    '1': randish(soup),
-    '2': randish(porridge),
-    '3': randish(potato),
-    '4': randish(pasta),
-    '5': randish(salad),
-    '6': randish(bake),
-    '7': randish(randish(all))
+    1: randish(soup),
+    2: randish(porridge),
+    3: randish(potato),
+    4: randish(pasta),
+    5: randish(salad),
+    6: randish(bake),
+    7: randish(randish(all))
 }
 #Проверяет подходит ли ключ нашему вводу, если нет то тут по дефолту выходим
 if option in value:
