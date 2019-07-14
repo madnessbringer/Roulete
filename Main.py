@@ -8,10 +8,10 @@ import random
 #Функция для чтения файла и записи результата в массив
 def readfile(filepath):
     array = []
-    file = open(filepath, 'r', encoding='utf-8')
-    for line in file:
-        array.append(file.read().split('\n'))
-    file.close()
+    # file = open(filepath, 'r', encoding='utf-8')
+    with open(filepath, 'r', encoding='utf-8') as file:
+        for line in file:
+            array.append(file.read().split('\n'))
     return array
 
 
